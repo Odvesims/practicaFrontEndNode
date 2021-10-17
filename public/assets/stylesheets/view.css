@@ -1,15 +1,11 @@
-.error {
+.message-modal {
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 30%;
   opacity: 0.9;
+  width: 20em;
 }
 
-.success {
-  color: green;
-  padding: 20px;
-  border: 2px solid green;
-  position: absolute;
-  top: 40%;
-  left: 40%;
+.hand-cursor {
+  cursor: pointer;
 }

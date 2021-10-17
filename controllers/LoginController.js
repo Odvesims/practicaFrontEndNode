@@ -1,4 +1,4 @@
-import DataService from "../services/DataService.js"
+import UserDataService from "../services/UserDataService.js"
 import PubSub from "../services/PubSub.js"
 
 export default class LoginController {
@@ -18,7 +18,7 @@ export default class LoginController {
         const url = new URLSearchParams(window.location.search)
         const next = url.get('next') || '/'
         try {
-          const result = await DataService.login(username, password)
+          const result = await UserDataService.login(username, password)
           location.href = next  
         } catch (error) {
           PubSub.publish(PubSub.events.SHOW_ERROR, error)

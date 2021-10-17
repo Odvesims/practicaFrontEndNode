@@ -1,4 +1,4 @@
-import DataService from "../services/DataService.js"
+import UserDataService from "../services/UserDataService.js"
 import PubSub from "../services/PubSub.js"
 import {SignUpFormValidation} from '../utils/validations/SignUpValidations.js'
 
@@ -17,6 +17,7 @@ export default class SignupController {
       const input = passwordInputs[i];
       if(!passwords.includes(input.value)) passwords.push(input.value)
     };
+    console.log('passwords', passwords);
     if(passwords.length == 1) {
       for(let i = 0; i < passwordInputs.length; i++){
         const input = passwordInputs[i];
@@ -38,8 +39,12 @@ export default class SignupController {
           const data = new FormData(this)
           const username = data.get('username')  
           const password = data.get('password')  
-          const result = await DataService.registerUser(username, password)
-          PubSub.publish(PubSub.events.SHOW_SUCCESS, 'Sign-up Successful')
+          const result = await UserDataService.registerUser(username, password)
+          PubSub.publish(PubSub.events.SHOW_SUCCESS, 'Sign-up Successful');
+          const login = await UserDataService.login(username, password)
+          if(login){
+            location.href = '/';
+          }
         } catch (error) {
           console.log(error);
           PubSub.publish(PubSub.events.SHOW_ERROR, error)
@@ -53,12 +58,6 @@ export default class SignupController {
         }
         PubSub.publish(PubSub.events.SHOW_ERROR, errorMessage)
       }
-    })
-        
-    this.element.querySelectorAll('input[type="password"]').forEach(input => {
-      input.addEventListener('input', () => {
-        this.validatePasswordsMatch()
-      })
     })
 
     this.element.querySelectorAll('input').forEach(inputElement => {

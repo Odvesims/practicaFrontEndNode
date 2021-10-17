@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "username": "1",
+      "password": "$2b$10$89qZYMfGGDp3CRUOkBHRr.fo4CLEmJfCADCb9VDlgyMrcu9FxkOrm",
+      "id": 1
+    },
+    {
+      "username": "oscar_ve",
+      "password": "$2b$10$89qZYMfGGDp3CRUOkBHRr.s8tC2INp0ggTK//tHASYiJTKHmQ5MMC",
+      "id": 2
+    }
+  ],
+  "ads": [
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "iPhone 12 Pro",
+      "type": "sell",
+      "photo": "iphone12.jpg",
+      "price": 990,
+      "tags": [
+        "technology",
+        "communication",
+        "phone"
+      ]
+    },
+    {
+      "id": 1,
+      "userId": 2,
+      "name": "MacBook Pro M1",
+      "type": "buy",
+      "photo": "macbook.jpg",
+      "price": 1200,
+      "tags": [
+        "technology",
+        "computer"
+      ]
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Samsung TV",
+      "type": "sell",
+      "photo": "samsung.jpg",
+      "price": 450,
+      "tags": [
+        "entertainment",
+        "leisure"
+      ]
+    }
+  ]
+}

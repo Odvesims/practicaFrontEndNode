@@ -1,0 +1,15 @@
+.error {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  opacity: 0.9;
+}
+
+.success {
+  color: green;
+  padding: 20px;
+  border: 2px solid green;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}

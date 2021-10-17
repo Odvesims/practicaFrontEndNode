@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./public/assets/js/signup.js" type="module"></script>
+    <link rel="stylesheet" href="public/assets/stylesheets/view.css" />
+    <title>Nodepop</title>
+  </head>
+  <body>
+    <div class="error-message"></div>
+    <div class = "border bg-info text-light col-4 ml-4 mr-4 mt-4"><h5>Sign Up</h5></div>
+      <form novalidate>
+        <div class = "border bg-light col-4 ml-4 mr-4">
+          <div class = "row mt-2 m-2">
+            <input type="text" id="username" name="username" class = "form-control" placeholder="Username" required autofocus>
+          </div>
+          <div class = "row mt-2 m-2">
+            <input type="password" id="password" name="password" class = "form-control" placeholder="Password" required>
+          </div>
+          <div class = "row mt-2 m-2">
+            <input type="password" id="passwordConfirmation" name="passwordConfirmation" class = "form-control" placeholder="Confirm" required>
+          </div>
+          <div class = "row mt-2 m-2">
+            <div class = "col"><button class = "btn btn-primary" type="submit" disabled>Sign Up</button></div>
+            <div class = "col"><a class="small" href="/">Go Back</a></div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script type="module" src="public/assets/js/signup.js"></script>
+  </body>
+</html>

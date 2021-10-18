@@ -15,7 +15,7 @@
 
 2- En una carpeta disntita clonar el repo sparrest para el backend desde https://github.com/kasappeal/sparrest.js
 
-3- Copiar el archivo db.json que está en el raíz del repo principal y pegarla en el raiz del sparrest para poder probar con data inicial.
+3- Copiar el archivo db.json que está en el raíz del repo principal y pegarla en el raiz del sparrest para poder probar con data inicial. Este archivo contiene unos cuantos ads ya agregados y un usuario para testing (las credenciales son user: test.user01, pass: test123)
 
 4- Instalar las dependencias del sparrest (npm i, solo la primera vez) y correrlo (npm start)
 

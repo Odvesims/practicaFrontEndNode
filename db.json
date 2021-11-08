@@ -1,40 +1,33 @@
 {
   "users": [
     {
-      "username": "1",
-      "password": "$2b$10$89qZYMfGGDp3CRUOkBHRr.fo4CLEmJfCADCb9VDlgyMrcu9FxkOrm",
+      "username": "test.user",
+      "password": "$2b$10$4qhFB29opXORofPpG3/J2uGvP6PIApOTllfyQZL5aJ4RuYdrKHDy.",
       "id": 1
-    },
-    {
-      "username": "oscar_ve",
-      "password": "$2b$10$89qZYMfGGDp3CRUOkBHRr.s8tC2INp0ggTK//tHASYiJTKHmQ5MMC",
-      "id": 2
     }
   ],
   "ads": [
     {
       "id": 1,
       "userId": 2,
-      "name": "iPhone 12 Pro",
+      "name": "Toto Bag",
       "type": "sell",
-      "photo": "iphone12.jpg",
-      "price": 990,
+      "photo": "toto-bag.png",
+      "price": 45,
       "tags": [
-        "technology",
-        "communication",
-        "phone"
+        "baggage"
       ]
     },
     {
-      "id": 1,
+      "id": 2,
       "userId": 2,
-      "name": "MacBook Pro M1",
+      "name": "AirPods Pro",
       "type": "buy",
-      "photo": "macbook.jpg",
-      "price": 1200,
+      "photo": "airpod.png",
+      "price": 100,
       "tags": [
         "technology",
-        "computer"
+        "sound"
       ]
     },
     {
@@ -42,7 +35,7 @@
       "userId": 2,
       "name": "Samsung TV",
       "type": "sell",
-      "photo": "samsung.jpg",
+      "photo": "samsung.png",
       "price": 450,
       "tags": [
         "entertainment",

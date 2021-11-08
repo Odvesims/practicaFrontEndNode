@@ -6,7 +6,7 @@ export function addView(ad) {
       <time datetime="${ad.date}">${ad.date}</time>
   </div>
   <hr>
-</a>`
+</a>`;
 }
 
 export function errorView(message) {
@@ -16,7 +16,7 @@ export function errorView(message) {
     <p class="card-text">${message}</p>
   </div>
   <div class="card-footer text-primary"><button class = "btn btn-default">Cerrar</button></div>
-</div>`
+</div>`;
 }
 
 export function successView(message) {
@@ -26,31 +26,31 @@ export function successView(message) {
     <p class="card-text">${message}</p>
   </div>
   <div class="card-footer text-primary"><button class = "btn btn-default">Cerrar</button></div>
-</div>`
+</div>`;
 }
-
 
 export function loaderView() {
-  return '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>'
+  return '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>';
 }
 
-
 export function adPreview(ad) {
-  return adCard(ad)
+  return adCard(ad);
 }
 
 export function adDetailedView(ad) {
+  let adType = '<span class = "bg-success col">Buy</span>';
+  if (ad.type !== 'buy') adType = '<span class = "bg-warning">Sell</span>';
 
-  let adType = '<span class = "bg-success col">Buy</span>'
-  if(ad.type !== 'buy') adType = '<span class = "bg-warning">Sell</span>' 
+  if (ad === null || ad.name === undefined)
+    return '<h1> This ad does not exists.</h1>';
 
-  if (ad === null || ad.name === undefined) return '<h1> This ad does not exists.</h1>'
-  
-  let button = ''
-  if (ad.allowedToDelete) button = '<button class="mt-1 btn btn-danger" id="ad-delete-btn"> Delete </button>'
+  let button = '';
+  if (ad.allowedToDelete)
+    button =
+      '<button class="mt-1 btn btn-danger" id="ad-delete-btn"> Delete </button>';
 
-  if (ad.photo === "") ad.photo = "no-picture.png"
-  
+  if (ad.photo === '') ad.photo = 'no-picture.png';
+
   return `<div><img src="public/assets/images/${ad.photo}" alt="ad-photo"></div>
     <div class = "mt-1">
       <p class="price"> Price: ${ad.price}</p>
@@ -58,18 +58,18 @@ export function adDetailedView(ad) {
       <p class="type"> Listed for: ${ad.type} </p>
       <p class="tags"> Tags: ${ad.tags} </p>
     </div>
-    ${button}`
+    ${button}`;
 }
 
-function adCard(ad){
+function adCard(ad) {
   const ownership = ad.allowedToDelete ? 'You posted this ad' : '';
-  if(ad.photo === ''){
+  if (ad.photo === '') {
     ad.photo = 'no-picture.png';
   }
-  let adType = '<span class = "bg-success col">Buy</span>'
-  if(ad.type !== 'buy'){
-    adType = '<span class = "bg-warning">Sell</span>' 
-  };
+  let adType = '<span class = "bg-success col">Buy</span>';
+  if (ad.type !== 'buy') {
+    adType = '<span class = "bg-warning">Sell</span>';
+  }
   return `<a class = "col-4 mt-1 border hand-cursor" href='/detail.html?id=${ad.id}'>
     <div class = 'row bg-primary text-white'>${ad.name}</div>
     <div class = 'row small'>${ownership}</div>
@@ -78,5 +78,5 @@ function adCard(ad){
       <div class = "col-6">Type: ${adType}</div>
       <div class = "col-6">Price: ${ad.price}</div>
     </div>
-  </a>`
+  </a>`;
 }
